@@ -1,0 +1,83 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: interview-agent
+
+  # DashScope LLM Configuration
+  ai:
+    dashscope:
+      api-key: ${DASHSCOPE_API_KEY}
+      # 注：read-timeout 在 Spring AI Alibaba 1.1.2.0 未真正绑定生效，实际 HTTP 超时由
+      # RagHttpClientAutoConfig 的自定义 RestClientCustomizer 控制（默认 600s，可用
+      # 环境变量 DASHSCOPE_READ_TIMEOUT 覆盖）
+      read-timeout: 600
+      chat:
+        options:
+          model: ${LLM_MODEL:qwen-plus}
+          multi-model: true   # 启用多模态模式，使 qwen3.7-plus 等多模态模型走正确的 API 路径
+      embedding:
+        options:
+          model: ${EMBEDDING_MODEL:text-embedding-v3}
+
+  # Redis
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+      database: ${REDIS_DB:0}
+
+  # MySQL / JPA
+  datasource:
+    url: ${MYSQL_URL:jdbc:mysql://localhost:3306/interview_agent?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai}
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:interview}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+# Application Custom Config
+app:
+  milvus:
+    host: ${MILVUS_HOST:localhost}
+    port: ${MILVUS_PORT:19530}
+  jwt:
+    secret: ${JWT_SECRET:interview-agent-default-secret}
+    expiration: 86400000  # 24 hours
+  github:
+    token: ${GITHUB_TOKEN:}
+  # 网页搜索（Router 升级：出题 Agent 在题库之外的第二个检索源，博查AI搜索 open.bochaai.com）
+  # 不配置则 WebSearchTool 不会注册为 Bean，出题 Agent 自动退化为只用题库
+  websearch:
+    api-key: ${BOCHA_API_KEY:}
+  auth:
+    enabled: ${AUTH_ENABLED:true}
+  rag:
+    reranker:
+      # 重排策略：cross-encoder（DashScope gte-rerank 专用重排模型，默认，主流程出题用）| llm（大模型语义重排）| none（不重排）
+      type: ${RERANKER_TYPE:cross-encoder}
+      # cross-encoder 使用的 DashScope 重排模型；gte-rerank-v2 为当前可用版本
+      cross-encoder-model: ${RERANK_MODEL:gte-rerank-v2}
+
+# 可观测性：Spring AI 的 ChatModel 调用自动产生 Observation span（含 gen_ai.usage.* token 属性）
+# 引入 micrometer-tracing-bridge-otel + opentelemetry-exporter-otlp 后，span 自动导出到 OTLP 后端
+management:
+  tracing:
+    sampling:
+      probability: ${OTEL_SAMPLING_PROBABILITY:1.0}  # 开发环境全采样，生产可降到 0.1
+  endpoints:
+    web:
+      exposure:
+        include: prometheus,health,info
+  otlp:
+    tracing:
+      endpoint: ${OTLP_ENDPOINT:http://localhost:4317}
+      # OTLP 后端不可达时 fail-open（面试流程不受影响，仅日志 warn）
+      # 后端选项：自建 Langfuse Docker / Grafana Tempo / 阿里云 ARMS

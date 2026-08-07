@@ -1,0 +1,45 @@
+# Langfuse — LLM 可观测性后端
+#
+# 用于接收 Spring AI 的 OTLP trace，查看面试全链路的 LLM 调用、Token 消耗、Prompt/Response 回放。
+# 启动：docker compose -f docker-compose-langfuse.yml up -d
+# 访问：http://localhost:3000（首次需注册账号）
+#
+# 后端 OTLP endpoint 配置（.env）：
+#   OTLP_ENDPOINT=http://localhost:4317  (gRPC)
+#   或 OTLP_ENDPOINT=http://localhost:4318 (HTTP，如果 gRPC 不通)
+
+services:
+  langfuse:
+    image: langfuse/langfuse:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=postgresql://langfuse:langfuse@langfuse-db:5432/langfuse
+      - NEXTAUTH_SECRET=langfuse-secret-change-me
+      - SALT=langfuse-salt-change-me
+      - NEXTAUTH_URL=http://localhost:3000
+      - TELEMETRY_ENABLED=false
+      # OTLP 接收端点（Langfuse 同时支持 gRPC 4317 和 HTTP 4318）
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4317
+    depends_on:
+      langfuse-db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  langfuse-db:
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_USER=langfuse
+      - POSTGRES_PASSWORD=langfuse
+      - POSTGRES_DB=langfuse
+    volumes:
+      - langfuse_db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U langfuse"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+volumes:
+  langfuse_db_data:

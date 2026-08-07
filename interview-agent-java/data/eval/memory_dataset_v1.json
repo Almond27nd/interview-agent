@@ -1,0 +1,1426 @@
+[ {
+  "id" : "mem_001",
+  "position" : "Java后端开发工程师",
+  "candidates" : [ {
+    "topic" : "分布式事务",
+    "score" : 55.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 10
+  }, {
+    "topic" : "微服务",
+    "score" : 60.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 8
+  }, {
+    "topic" : "Flink窗口",
+    "score" : 52.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 25
+  }, {
+    "topic" : "Go并发",
+    "score" : 58.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 40
+  } ],
+  "note" : "Seata 是分布式事务框架、两阶段提交是其协议，但字符串互不包含——baseline 必漏",
+  "jd_skills" : [ "seata", "两阶段提交", "spring cloud", "微服务" ],
+  "relevant_topics" : [ "分布式事务", "微服务" ]
+}, {
+  "id" : "mem_002",
+  "position" : "Java后端开发工程师",
+  "candidates" : [ {
+    "topic" : "MySQL索引",
+    "score" : 55.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 4,
+    "wrong_count" : 4,
+    "relapse_count" : 0,
+    "days_ago" : 6
+  }, {
+    "topic" : "Redis持久化",
+    "score" : 58.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 12
+  }, {
+    "topic" : "Java并发",
+    "score" : 52.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 5,
+    "wrong_count" : 4,
+    "relapse_count" : 0,
+    "days_ago" : 4
+  }, {
+    "topic" : "Flink窗口",
+    "score" : 50.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 1,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 30
+  } ],
+  "note" : "三者字面均命中；Java并发 是顽固薄弱点应排最前",
+  "jd_skills" : [ "mysql", "redis", "java并发" ],
+  "relevant_topics" : [ "Java并发", "MySQL索引", "Redis持久化" ]
+}, {
+  "id" : "mem_003",
+  "position" : "Java后端开发工程师",
+  "candidates" : [ {
+    "topic" : "MySQL事务",
+    "score" : 58.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 1,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 3
+  }, {
+    "topic" : "MySQL索引",
+    "score" : 55.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 6,
+    "wrong_count" : 5,
+    "relapse_count" : 0,
+    "days_ago" : 5
+  } ],
+  "note" : "MySQL索引 考6错5且顽固，应排第一；baseline 按最新得分排会把 MySQL事务 排前",
+  "jd_skills" : [ "mysql" ],
+  "relevant_topics" : [ "MySQL索引", "MySQL事务" ]
+}, {
+  "id" : "mem_004",
+  "position" : "C++后端开发工程师",
+  "candidates" : [ {
+    "topic" : "IO模型",
+    "score" : 52.0,
+    "stubborn" : false,
+    "difficulty" : "hard",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 9
+  }, {
+    "topic" : "TCP协议",
+    "score" : 60.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 15
+  }, {
+    "topic" : "MySQL索引",
+    "score" : 58.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 35
+  } ],
+  "note" : "epoll 是 IO 多路复用的具体实现，属上下位关系",
+  "jd_skills" : [ "epoll", "io多路复用", "tcp" ],
+  "relevant_topics" : [ "IO模型", "TCP协议" ]
+}, {
+  "id" : "mem_005",
+  "position" : "Go后端开发工程师",
+  "candidates" : [ {
+    "topic" : "Go并发",
+    "score" : 55.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 4,
+    "wrong_count" : 4,
+    "relapse_count" : 0,
+    "days_ago" : 7
+  }, {
+    "topic" : "Go channel",
+    "score" : 58.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 11
+  }, {
+    "topic" : "JVM垃圾回收",
+    "score" : 50.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 20
+  } ],
+  "note" : "JVM垃圾回收 虽是顽固薄弱点但与 Go 岗位无关，不应判为强相关——检验 Precision",
+  "jd_skills" : [ "goroutine", "channel", "go调度器" ],
+  "relevant_topics" : [ "Go并发", "Go channel" ]
+}, {
+  "id" : "mem_006",
+  "position" : "Java后端开发工程师",
+  "candidates" : [ {
+    "topic" : "分布式事务",
+    "score" : 52.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "aliases" : [ "TCC", "最终一致性" ],
+    "hit_count" : 4,
+    "wrong_count" : 4,
+    "relapse_count" : 0,
+    "days_ago" : 6
+  }, {
+    "topic" : "MySQL锁",
+    "score" : 60.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 18
+  } ],
+  "note" : "实体归一时留档的别名参与词法匹配，是 M2 的正向副产物",
+  "jd_skills" : [ "tcc", "最终一致性" ],
+  "relevant_topics" : [ "分布式事务" ]
+}, {
+  "id" : "mem_007",
+  "position" : "Java后端开发工程师",
+  "candidates" : [ {
+    "topic" : "Redis缓存问题",
+    "score" : 50.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 8
+  }, {
+    "topic" : "Redis数据结构",
+    "score" : 62.0,
+    "stubborn" : false,
+    "difficulty" : "easy",
+    "hit_count" : 2,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 14
+  }, {
+    "topic" : "操作系统内存管理",
+    "score" : 55.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 28
+  } ],
+  "note" : "缓存穿透/雪崩 与「Redis缓存问题」是同一考点的不同表述；「操作系统内存管理」仅共有一个『存』字，不应召回（曾因此产生假阳性）",
+  "jd_skills" : [ "缓存穿透", "缓存雪崩", "高并发" ],
+  "relevant_topics" : [ "Redis缓存问题" ]
+}, {
+  "id" : "mem_008",
+  "position" : "Java后端开发工程师",
+  "candidates" : [ {
+    "topic" : "消息队列可靠性",
+    "score" : 52.0,
+    "stubborn" : false,
+    "difficulty" : "hard",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 10
+  }, {
+    "topic" : "Kafka原理",
+    "score" : 58.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 13
+  }, {
+    "topic" : "MySQL索引",
+    "score" : 55.0,
+    "stubborn" : true,
+    "difficulty" : "medium",
+    "hit_count" : 5,
+    "wrong_count" : 4,
+    "relapse_count" : 0,
+    "days_ago" : 5
+  }, {
+    "topic" : "Go并发",
+    "score" : 60.0,
+    "stubborn" : false,
+    "difficulty" : "easy",
+    "hit_count" : 1,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 45
+  } ],
+  "note" : "Kafka/MySQL 字面命中；「消息幂等」↔「消息队列可靠性」需语义",
+  "jd_skills" : [ "kafka", "消息幂等", "mysql" ],
+  "relevant_topics" : [ "MySQL索引", "Kafka原理", "消息队列可靠性" ]
+}, {
+  "id" : "mem_009",
+  "position" : "Java后端开发工程师",
+  "candidates" : [ {
+    "topic" : "分布式事务",
+    "score" : 52.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 4,
+    "wrong_count" : 4,
+    "relapse_count" : 0,
+    "days_ago" : 7
+  }, {
+    "topic" : "MySQL锁",
+    "score" : 60.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 20
+  }, {
+    "topic" : "Java集合",
+    "score" : 65.0,
+    "stubborn" : false,
+    "difficulty" : "easy",
+    "hit_count" : 2,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 30
+  } ],
+  "note" : "困难样本：Saga/XA 未收录进同义词表，仅靠词法必漏；只有语义通道生效时才能召回",
+  "jd_skills" : [ "saga模式", "xa协议" ],
+  "relevant_topics" : [ "分布式事务" ]
+}, {
+  "id" : "mem_010",
+  "position" : "Java后端开发工程师",
+  "candidates" : [ {
+    "topic" : "JVM内存模型",
+    "score" : 55.0,
+    "stubborn" : false,
+    "difficulty" : "hard",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 8
+  }, {
+    "topic" : "操作系统内存管理",
+    "score" : 58.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 22
+  }, {
+    "topic" : "Java并发",
+    "score" : 52.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 4,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 6
+  } ],
+  "note" : "困难样本：「操作系统内存管理」与「JVM内存模型」共有『内存』两字但考点不同，不应召回",
+  "jd_skills" : [ "jvm内存模型", "java并发" ],
+  "relevant_topics" : [ "JVM内存模型", "Java并发" ]
+}, {
+  "id" : "mem_011",
+  "position" : "前端开发工程师",
+  "candidates" : [ {
+    "topic" : "MySQL索引",
+    "score" : 50.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 5,
+    "wrong_count" : 5,
+    "relapse_count" : 0,
+    "days_ago" : 5
+  }, {
+    "topic" : "JVM垃圾回收",
+    "score" : 52.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 4,
+    "wrong_count" : 4,
+    "relapse_count" : 0,
+    "days_ago" : 9
+  }, {
+    "topic" : "Go并发",
+    "score" : 55.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 14
+  } ],
+  "note" : "困难样本：候选全为后端薄弱点、岗位是前端，正确行为是全部判为『供参考』而非强相关",
+  "jd_skills" : [ "react", "typescript", "webpack" ],
+  "relevant_topics" : [ ]
+}, {
+  "id" : "mem_012",
+  "position" : "Java后端开发工程师",
+  "candidates" : [ {
+    "topic" : "MySQL索引",
+    "score" : 88.0,
+    "stubborn" : false,
+    "difficulty" : "hard",
+    "hit_count" : 4,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 4
+  }, {
+    "topic" : "Redis持久化",
+    "score" : 50.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 6
+  } ],
+  "note" : "困难样本：MySQL索引 近期 hard 题得 88 分已基本掌握，不该与真薄弱点并列重点考；这是 M1 筛选层的职责，M3 单独无法解决——属已知上限",
+  "jd_skills" : [ "mysql", "redis" ],
+  "relevant_topics" : [ "Redis持久化" ]
+}, {
+  "id" : "mem_013",
+  "position" : "大数据开发工程师",
+  "candidates" : [ {
+    "topic" : "Flink窗口",
+    "score" : 52.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 8
+  }, {
+    "topic" : "数据倾斜",
+    "score" : 55.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 12
+  }, {
+    "topic" : "Spark调优",
+    "score" : 58.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 20
+  }, {
+    "topic" : "MySQL索引",
+    "score" : 60.0,
+    "stubborn" : false,
+    "difficulty" : "easy",
+    "hit_count" : 2,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 40
+  } ],
+  "note" : "公平样本：三者字面均命中，两策略应持平——用于检验 hybrid 没有把原本能召回的搞丢",
+  "jd_skills" : [ "flink", "spark", "hive", "数据倾斜" ],
+  "relevant_topics" : [ "Flink窗口", "数据倾斜", "Spark调优" ]
+}, {
+  "id" : "mem_014",
+  "position" : "前端开发工程师",
+  "candidates" : [ {
+    "topic" : "React Hooks",
+    "score" : 52.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 7
+  }, {
+    "topic" : "虚拟DOM",
+    "score" : 55.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 14
+  }, {
+    "topic" : "浏览器渲染原理",
+    "score" : 58.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 21
+  }, {
+    "topic" : "MySQL索引",
+    "score" : 60.0,
+    "stubborn" : false,
+    "difficulty" : "easy",
+    "hit_count" : 1,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 50
+  } ],
+  "note" : "公平样本：验证归一化（大小写/空格）后字面匹配在前端语境同样有效",
+  "jd_skills" : [ "react", "虚拟dom", "webpack", "浏览器渲染" ],
+  "relevant_topics" : [ "React Hooks", "虚拟DOM", "浏览器渲染原理" ]
+}, {
+  "id" : "mem_015",
+  "position" : "运维开发工程师",
+  "candidates" : [ {
+    "topic" : "Kubernetes调度",
+    "score" : 52.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 9
+  }, {
+    "topic" : "容器隔离原理",
+    "score" : 56.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 18
+  }, {
+    "topic" : "Java并发",
+    "score" : 62.0,
+    "stubborn" : false,
+    "difficulty" : "easy",
+    "hit_count" : 1,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 60
+  } ],
+  "note" : "困难样本：Docker 的核心考点就是容器隔离（namespace/cgroup），但字面无交集，降级状态下 hybrid 也应漏",
+  "jd_skills" : [ "kubernetes", "docker", "prometheus" ],
+  "relevant_topics" : [ "Kubernetes调度", "容器隔离原理" ]
+}, {
+  "id" : "mem_016",
+  "position" : "Android开发工程师",
+  "candidates" : [ {
+    "topic" : "Kotlin协程",
+    "score" : 54.0,
+    "stubborn" : false,
+    "difficulty" : "hard",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 10
+  }, {
+    "topic" : "Android内存泄漏",
+    "score" : 50.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 4,
+    "wrong_count" : 4,
+    "relapse_count" : 0,
+    "days_ago" : 6
+  }, {
+    "topic" : "JVM垃圾回收",
+    "score" : 58.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 25
+  } ],
+  "note" : "JVM垃圾回收 不标：Android 运行时是 ART 而非 HotSpot，属不同考点——避免过度关联",
+  "jd_skills" : [ "kotlin", "jetpack compose", "内存泄漏" ],
+  "relevant_topics" : [ "Android内存泄漏", "Kotlin协程" ]
+}, {
+  "id" : "mem_017",
+  "position" : "算法工程师",
+  "candidates" : [ {
+    "topic" : "Transformer结构",
+    "score" : 52.0,
+    "stubborn" : false,
+    "difficulty" : "hard",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 11
+  }, {
+    "topic" : "注意力机制",
+    "score" : 55.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 13
+  }, {
+    "topic" : "梯度消失",
+    "score" : 58.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 26
+  }, {
+    "topic" : "MySQL索引",
+    "score" : 62.0,
+    "stubborn" : false,
+    "difficulty" : "easy",
+    "hit_count" : 1,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 55
+  } ],
+  "note" : "梯度消失 标为相关：残差连接正是为解决深层网络梯度问题，属该岗必考基础；字面无交集",
+  "jd_skills" : [ "pytorch", "transformer", "注意力机制" ],
+  "relevant_topics" : [ "Transformer结构", "注意力机制", "梯度消失" ]
+}, {
+  "id" : "mem_018",
+  "position" : "Java后端开发工程师",
+  "candidates" : [ {
+    "topic" : "JVM内存模型",
+    "score" : 52.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 8
+  }, {
+    "topic" : "Java并发",
+    "score" : 55.0,
+    "stubborn" : false,
+    "difficulty" : "hard",
+    "hit_count" : 4,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 10
+  }, {
+    "topic" : "Redis持久化",
+    "score" : 60.0,
+    "stubborn" : false,
+    "difficulty" : "easy",
+    "hit_count" : 2,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 30
+  } ],
+  "note" : "困难样本：JMM 即 JVM 内存模型、volatile/CAS 属 Java 并发，但三个缩写与 topic 字面完全无交集——两策略均应失败，纯语义样本",
+  "jd_skills" : [ "jmm", "volatile", "cas" ],
+  "relevant_topics" : [ "JVM内存模型", "Java并发" ]
+}, {
+  "id" : "mem_019",
+  "position" : "Java后端开发工程师",
+  "candidates" : [ {
+    "topic" : "动态代理",
+    "score" : 54.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 12
+  }, {
+    "topic" : "Spring原理",
+    "score" : 56.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 16
+  }, {
+    "topic" : "设计模式",
+    "score" : 60.0,
+    "stubborn" : false,
+    "difficulty" : "easy",
+    "hit_count" : 2,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 28
+  } ],
+  "note" : "「Spring原理」与「spring aop」共享 ASCII 词 spring，词法 token 重叠可命中而 baseline 的双向 contains 不能——hybrid 应更优",
+  "jd_skills" : [ "spring aop", "动态代理", "ioc" ],
+  "relevant_topics" : [ "动态代理", "Spring原理" ]
+}, {
+  "id" : "mem_020",
+  "position" : "Java后端开发工程师",
+  "candidates" : [ {
+    "topic" : "Redis集群模式",
+    "score" : 52.0,
+    "stubborn" : false,
+    "difficulty" : "hard",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 9
+  }, {
+    "topic" : "Redis持久化",
+    "score" : 58.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 15
+  }, {
+    "topic" : "Redis数据结构",
+    "score" : 64.0,
+    "stubborn" : false,
+    "difficulty" : "easy",
+    "hit_count" : 2,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 22
+  } ],
+  "note" : "困难样本（hybrid 应更差）：三个候选都含 ASCII 词 redis，词法 token 重叠会把持久化/数据结构一并判为相关，而它们与集群/哨兵是不同考点；baseline 的严格 contains 反而不会误召回——这条专门暴露共享英文词的假阳性",
+  "jd_skills" : [ "redis集群", "redis哨兵" ],
+  "relevant_topics" : [ "Redis集群模式" ]
+}, {
+  "id" : "mem_021",
+  "position" : "Java后端开发工程师",
+  "candidates" : [ {
+    "topic" : "消息队列可靠性",
+    "score" : 52.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 7
+  }, {
+    "topic" : "Kafka原理",
+    "score" : 56.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 19
+  }, {
+    "topic" : "MySQL事务",
+    "score" : 60.0,
+    "stubborn" : false,
+    "difficulty" : "easy",
+    "hit_count" : 2,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 33
+  } ],
+  "note" : "困难样本（hybrid 应更差）：「MySQL事务」与「事务消息」共有『事务』两字会被词法判为相关，但数据库事务与 MQ 事务消息是不同考点；而真正相关的「Kafka原理」字面无交集",
+  "jd_skills" : [ "消息队列", "rocketmq", "事务消息" ],
+  "relevant_topics" : [ "消息队列可靠性", "Kafka原理" ]
+}, {
+  "id" : "mem_022",
+  "position" : "Java后端开发工程师",
+  "candidates" : [ {
+    "topic" : "操作系统进程管理",
+    "score" : 54.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 13
+  }, {
+    "topic" : "线程池",
+    "score" : 58.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 17
+  }, {
+    "topic" : "Java并发",
+    "score" : 52.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 4,
+    "wrong_count" : 4,
+    "relapse_count" : 0,
+    "days_ago" : 6
+  } ],
+  "note" : "baseline 的 contains 三者全否；词法 token 重叠可命中前两个（『进程』『线程』）——hybrid 应更优",
+  "jd_skills" : [ "进程调度", "上下文切换", "线程模型" ],
+  "relevant_topics" : [ "操作系统进程管理", "线程池", "Java并发" ]
+}, {
+  "id" : "mem_023",
+  "position" : "Python后端开发工程师",
+  "candidates" : [ {
+    "topic" : "Python GIL",
+    "score" : 52.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 8
+  }, {
+    "topic" : "协程原理",
+    "score" : 55.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 14
+  }, {
+    "topic" : "Java并发",
+    "score" : 58.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 3,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 30
+  } ],
+  "note" : "困难样本：asyncio 就是 Python 协程，但字面无交集，降级下必漏其一",
+  "jd_skills" : [ "python", "django", "asyncio" ],
+  "relevant_topics" : [ "Python GIL", "协程原理" ]
+}, {
+  "id" : "mem_024",
+  "position" : "测试开发工程师",
+  "candidates" : [ {
+    "topic" : "接口测试设计",
+    "score" : 54.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 12
+  }, {
+    "topic" : "Python GIL",
+    "score" : 60.0,
+    "stubborn" : false,
+    "difficulty" : "easy",
+    "hit_count" : 2,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 26
+  }, {
+    "topic" : "性能压测",
+    "score" : 56.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 20
+  } ],
+  "note" : "「性能压测」与「自动化测试」仅共有一个『测』字，按 isMeaningfulOverlap 规则不应命中——它属该岗核心考点却只能靠语义救回，两策略均应漏",
+  "jd_skills" : [ "自动化测试", "接口测试", "python" ],
+  "relevant_topics" : [ "接口测试设计", "性能压测", "Python GIL" ]
+}, {
+  "id" : "mem_025",
+  "position" : "数据分析工程师",
+  "candidates" : [ {
+    "topic" : "Hive优化",
+    "score" : 56.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 15
+  }, {
+    "topic" : "NoSQL选型",
+    "score" : 58.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 18
+  }, {
+    "topic" : "指标体系设计",
+    "score" : 54.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 9
+  }, {
+    "topic" : "JVM垃圾回收",
+    "score" : 62.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 34
+  } ],
+  "note" : "「NoSQL选型」含子串 sql 会被两策略同时误召回（NoSQL 与 SQL 是相反的考点）——这是子串匹配的共有缺陷，非 hybrid 引入",
+  "jd_skills" : [ "sql", "hive", "指标体系" ],
+  "relevant_topics" : [ "Hive优化", "指标体系设计" ]
+}, {
+  "id" : "mem_026",
+  "position" : "Java后端开发工程师",
+  "candidates" : [ {
+    "topic" : "MySQL锁",
+    "score" : 50.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 5,
+    "wrong_count" : 5,
+    "relapse_count" : 0,
+    "days_ago" : 4
+  }, {
+    "topic" : "MySQL事务",
+    "score" : 78.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 3,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 6
+  }, {
+    "topic" : "MySQL索引",
+    "score" : 75.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 3,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 8
+  } ],
+  "note" : "三者字面均命中，但事务/索引近期得分已高（掌握度上来了），只有 MySQL锁 是真薄弱点；检验掌握度置信度是否真正参与排序（MRR 应为 1.0）",
+  "jd_skills" : [ "mysql" ],
+  "relevant_topics" : [ "MySQL锁" ]
+}, {
+  "id" : "mem_027",
+  "position" : "C++后端开发工程师",
+  "candidates" : [ {
+    "topic" : "C++智能指针",
+    "score" : 52.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 8
+  }, {
+    "topic" : "C++内存管理",
+    "score" : 56.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 16
+  }, {
+    "topic" : "STL容器",
+    "score" : 58.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 20
+  }, {
+    "topic" : "Java集合",
+    "score" : 64.0,
+    "stubborn" : false,
+    "difficulty" : "easy",
+    "hit_count" : 1,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 45
+  } ],
+  "note" : "移动语义 ↔ C++内存管理 属资源管理同一考点但字面无交集，需语义；另两个字面命中",
+  "jd_skills" : [ "智能指针", "移动语义", "stl" ],
+  "relevant_topics" : [ "C++智能指针", "STL容器", "C++内存管理" ]
+}, {
+  "id" : "mem_028",
+  "position" : "Go后端开发工程师",
+  "candidates" : [ {
+    "topic" : "Go并发",
+    "score" : 52.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 4,
+    "wrong_count" : 4,
+    "relapse_count" : 0,
+    "days_ago" : 7
+  }, {
+    "topic" : "Go内存管理",
+    "score" : 55.0,
+    "stubborn" : false,
+    "difficulty" : "hard",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 13
+  }, {
+    "topic" : "Go channel",
+    "score" : 60.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 25
+  }, {
+    "topic" : "Redis持久化",
+    "score" : 62.0,
+    "stubborn" : false,
+    "difficulty" : "easy",
+    "hit_count" : 1,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 40
+  } ],
+  "note" : "baseline 的双向 contains 三者全否（gmp/pprof 与 topic 互不包含）；词法 token 重叠靠共享的 go 全部命中——hybrid 应明显更优",
+  "jd_skills" : [ "gmp", "go内存逃逸", "pprof" ],
+  "relevant_topics" : [ "Go并发", "Go内存管理", "Go channel" ]
+}, {
+  "id" : "mem_029",
+  "position" : "Java后端开发工程师",
+  "candidates" : [ {
+    "topic" : "TCP协议",
+    "score" : 52.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 4,
+    "wrong_count" : 4,
+    "relapse_count" : 0,
+    "days_ago" : 9
+  }, {
+    "topic" : "HTTP协议",
+    "score" : 56.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 3,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 15
+  }, {
+    "topic" : "IO模型",
+    "score" : 60.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 28
+  } ],
+  "note" : "baseline 全否（『tcp拥塞控制』不包含『tcp协议』）；词法可靠 tcp 命中其一，但 https/http2 与『HTTP协议』分词后无交集——部分提升",
+  "jd_skills" : [ "tcp拥塞控制", "https握手", "http2" ],
+  "relevant_topics" : [ "TCP协议", "HTTP协议" ]
+}, {
+  "id" : "mem_030",
+  "position" : "Java后端开发工程师",
+  "candidates" : [ {
+    "topic" : "系统设计",
+    "score" : 52.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 10
+  }, {
+    "topic" : "服务治理",
+    "score" : 56.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 18
+  }, {
+    "topic" : "Redis缓存问题",
+    "score" : 58.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 3,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 12
+  }, {
+    "topic" : "Java集合",
+    "score" : 66.0,
+    "stubborn" : false,
+    "difficulty" : "easy",
+    "hit_count" : 1,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 50
+  } ],
+  "note" : "困难样本：高并发架构↔系统设计、限流降级↔服务治理 均为同义改写但字面无交集；仅『分布式缓存』能靠『缓存』两字命中——降级下 Recall 应很低",
+  "jd_skills" : [ "高并发架构", "限流降级", "分布式缓存" ],
+  "relevant_topics" : [ "系统设计", "服务治理", "Redis缓存问题" ]
+}, {
+  "id" : "mem_031",
+  "position" : "前端开发工程师",
+  "candidates" : [ {
+    "topic" : "前端性能优化",
+    "score" : 52.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 8
+  }, {
+    "topic" : "MySQL索引",
+    "score" : 58.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 20
+  }, {
+    "topic" : "操作系统内存管理",
+    "score" : 60.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 35
+  } ],
+  "note" : "回归检验：后两个与 JD 无任何有效交集，应保持 Precision = 1.0；若此条出现误召回，说明 isMeaningfulOverlap 的单字过滤失效",
+  "jd_skills" : [ "性能优化", "首屏加载" ],
+  "relevant_topics" : [ "前端性能优化" ]
+}, {
+  "id" : "mem_032",
+  "position" : "C++后端开发工程师",
+  "candidates" : [ {
+    "topic" : "IO模型",
+    "score" : 52.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "aliases" : [ "epoll", "NIO" ],
+    "hit_count" : 4,
+    "wrong_count" : 4,
+    "relapse_count" : 0,
+    "days_ago" : 9
+  }, {
+    "topic" : "线程池",
+    "score" : 58.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 17
+  } ],
+  "note" : "baseline 看不到别名必漏；hybrid 靠 aliases 精确命中——验证 M2 留档别名的跨模块价值",
+  "jd_skills" : [ "epoll", "nio" ],
+  "relevant_topics" : [ "IO模型" ]
+}, {
+  "id" : "mem_033",
+  "position" : "Java后端开发工程师",
+  "candidates" : [ {
+    "topic" : "MySQL索引",
+    "score" : 56.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 8,
+    "wrong_count" : 6,
+    "relapse_count" : 2,
+    "days_ago" : 5
+  }, {
+    "topic" : "分库分表",
+    "score" : 82.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 3,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 11
+  }, {
+    "topic" : "Redis持久化",
+    "score" : 64.0,
+    "stubborn" : false,
+    "difficulty" : "easy",
+    "hit_count" : 1,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 42
+  } ],
+  "note" : "分库分表 虽字面命中但近期得 82 分已掌握；MySQL索引 曾掌握后复发 2 次，应排首位",
+  "jd_skills" : [ "mysql", "分库分表" ],
+  "relevant_topics" : [ "MySQL索引" ]
+}, {
+  "id" : "mem_034",
+  "position" : "Go后端开发工程师",
+  "candidates" : [ {
+    "topic" : "React Hooks",
+    "score" : 52.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 9
+  }, {
+    "topic" : "虚拟DOM",
+    "score" : 56.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 15
+  }, {
+    "topic" : "CSS布局",
+    "score" : 60.0,
+    "stubborn" : false,
+    "difficulty" : "easy",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 25
+  } ],
+  "note" : "正确行为是一条都不判强相关；专门检验会不会为凑 Recall 而滥召回",
+  "jd_skills" : [ "goroutine", "grpc", "etcd" ],
+  "relevant_topics" : [ ]
+}, {
+  "id" : "mem_035",
+  "position" : "Java后端开发工程师",
+  "candidates" : [ {
+    "topic" : "Kafka原理",
+    "score" : 52.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 8
+  }, {
+    "topic" : "消息队列可靠性",
+    "score" : 56.0,
+    "stubborn" : false,
+    "difficulty" : "hard",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 14
+  }, {
+    "topic" : "MySQL索引",
+    "score" : 62.0,
+    "stubborn" : false,
+    "difficulty" : "easy",
+    "hit_count" : 1,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 38
+  } ],
+  "note" : "消费者组/offset 是 Kafka 的核心概念但字面不含 kafka；仅『消息队列可靠性』能靠『消息』两字命中——部分召回",
+  "jd_skills" : [ "消息积压", "消费者组", "offset提交" ],
+  "relevant_topics" : [ "Kafka原理", "消息队列可靠性" ]
+}, {
+  "id" : "mem_036",
+  "position" : "大数据开发工程师",
+  "candidates" : [ {
+    "topic" : "Spark调优",
+    "score" : 52.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 10
+  }, {
+    "topic" : "数据倾斜",
+    "score" : 55.0,
+    "stubborn" : false,
+    "difficulty" : "hard",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 12
+  }, {
+    "topic" : "Flink窗口",
+    "score" : 60.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 30
+  } ],
+  "note" : "shuffle/yarn 与「Spark调优」仅单字『优』『调』交集，按规则不命中——两策略应持平",
+  "jd_skills" : [ "shuffle优化", "数据倾斜", "yarn调度" ],
+  "relevant_topics" : [ "Spark调优", "数据倾斜" ]
+}, {
+  "id" : "mem_037",
+  "position" : "算法工程师",
+  "candidates" : [ {
+    "topic" : "Transformer结构",
+    "score" : 52.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 9
+  }, {
+    "topic" : "模型微调",
+    "score" : 56.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 14
+  }, {
+    "topic" : "梯度消失",
+    "score" : 60.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 24
+  } ],
+  "note" : "BERT 基于 Transformer 但字面无交集，属典型缩写/派生关系——需语义",
+  "jd_skills" : [ "bert", "微调", "loss设计" ],
+  "relevant_topics" : [ "Transformer结构", "模型微调" ]
+}, {
+  "id" : "mem_038",
+  "position" : "运维开发工程师",
+  "candidates" : [ {
+    "topic" : "可观测性建设",
+    "score" : 52.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 11
+  }, {
+    "topic" : "Kubernetes调度",
+    "score" : 58.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 19
+  }, {
+    "topic" : "MySQL索引",
+    "score" : 64.0,
+    "stubborn" : false,
+    "difficulty" : "easy",
+    "hit_count" : 1,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 44
+  } ],
+  "note" : "困难样本：日志/监控告警 正是可观测性的组成部分，属上位概念归纳，字面完全无交集——两策略均应失败",
+  "jd_skills" : [ "日志采集", "elk", "监控告警" ],
+  "relevant_topics" : [ "可观测性建设" ]
+}, {
+  "id" : "mem_039",
+  "position" : "Java后端开发工程师",
+  "candidates" : [ {
+    "topic" : "Redis持久化",
+    "score" : 56.0,
+    "stubborn" : false,
+    "difficulty" : "medium",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 16
+  }, {
+    "topic" : "分布式锁",
+    "score" : 50.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 4,
+    "wrong_count" : 4,
+    "relapse_count" : 0,
+    "days_ago" : 6
+  }, {
+    "topic" : "高并发库存扣减",
+    "score" : 54.0,
+    "stubborn" : false,
+    "difficulty" : "hard",
+    "hit_count" : 2,
+    "wrong_count" : 2,
+    "relapse_count" : 0,
+    "days_ago" : 13
+  }, {
+    "topic" : "Java集合",
+    "score" : 66.0,
+    "stubborn" : false,
+    "difficulty" : "easy",
+    "hit_count" : 1,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 48
+  } ],
+  "note" : "秒杀 ↔ 高并发库存扣减 是同一考点的业务化表述，字面无交集；另两个字面命中",
+  "jd_skills" : [ "redis", "分布式锁", "秒杀" ],
+  "relevant_topics" : [ "分布式锁", "高并发库存扣减", "Redis持久化" ]
+}, {
+  "id" : "mem_040",
+  "position" : "Java后端开发工程师",
+  "candidates" : [ {
+    "topic" : "MySQL主从复制",
+    "score" : 52.0,
+    "stubborn" : true,
+    "difficulty" : "hard",
+    "hit_count" : 3,
+    "wrong_count" : 3,
+    "relapse_count" : 0,
+    "days_ago" : 9
+  }, {
+    "topic" : "MySQL索引",
+    "score" : 60.0,
+    "stubborn" : false,
+    "difficulty" : "easy",
+    "hit_count" : 2,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 26
+  }, {
+    "topic" : "MySQL事务",
+    "score" : 62.0,
+    "stubborn" : false,
+    "difficulty" : "easy",
+    "hit_count" : 2,
+    "wrong_count" : 1,
+    "relapse_count" : 0,
+    "days_ago" : 31
+  } ],
+  "note" : "困难样本（hybrid 应更差）：三者共享 ASCII 词 mysql，词法会全部判为相关，而索引/事务与主从复制是不同考点；baseline 的严格 contains 只中正确的那一个。与 mem_020 共同构成『共享英文词假阳性』的证据",
+  "jd_skills" : [ "mysql主从复制", "binlog" ],
+  "relevant_topics" : [ "MySQL主从复制" ]
+} ]

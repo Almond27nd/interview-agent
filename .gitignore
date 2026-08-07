@@ -1,0 +1,45 @@
+# === Secrets / Env ===
+.env
+.env.*
+!.env.example
+!.env.template
+
+# === Java / Maven ===
+interview-agent-java/target/
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+.mvn/wrapper/maven-wrapper.jar
+
+# === Node.js / Frontend ===
+interview-agent-web/node_modules/
+interview-agent-web/dist/
+interview-agent-web/dist-ssr/
+*.local
+
+# === IDE ===
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.sw?
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# === OS ===
+.DS_Store
+Thumbs.db
+
+# === Logs ===
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# === CodeBuddy / Agent internals ===
+.codebuddy/
