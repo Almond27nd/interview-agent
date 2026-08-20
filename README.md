@@ -186,6 +186,16 @@ npm run lint        # ESLint 检查
 - [后端文档](interview-agent-java/README.md) — 架构详解、快速开始、FAQ
 - [前端文档](interview-agent-web/README.md) — 前端结构、启动、FAQ
 
+## 安全与部署检查（开源前必读）
+
+在将仓库公开或部署到生产环境前，请务必完成下面清单：
+
+- 不要在仓库中提交真实密钥或凭据。项目使用 `.env`（已在 `.gitignore` 中），但请确认历史提交中没有泄露过密钥；若发现泄露，立即撤销/重置相关密钥并用工具（如 BFG / git filter-repo）清理历史。
+- 在生产环境中务必设置并保管好 JWT_SECRET：不要使用示例值或空值。示例：在 GitHub Actions 或部署平台上通过 Secrets 管理 `JWT_SECRET` 与 `DASHSCOPE_API_KEY`。
+- 启用 GitHub 的 Secret scanning 与 Dependabot alerts，以便及时发现秘密泄露或依赖漏洞。
+- 将敏感配置写入平台/环境变量（或 GitHub Secrets），不要把它们写进仓库文件。
+- 在合并前启用分支保护（对 `main` 要求 CI 通过、至少一次 PR 审查、状态检查）。
+
 ## License
 
 [MIT](LICENSE)

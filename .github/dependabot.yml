@@ -1,0 +1,10 @@
+version: 2
+updates:
+  - package-ecosystem: "maven"
+    directory: "/interview-agent-java"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "npm"
+    directory: "/interview-agent-web"
+    schedule:
+      interval: "weekly"
