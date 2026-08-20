@@ -23,8 +23,8 @@
         <milvus-sdk.version>2.4.2</milvus-sdk.version>
         <jjwt.version>0.12.6</jjwt.version>
 
-        <!-- Added lombok.version so annotationProcessorPaths and dependency version resolve -->
-        <lombok.version>1.18.26</lombok.version>
+        <!-- Pin lombok.version explicitly; must be >= 1.18.30 for JDK 21 (JCTree$JCImport.qualid was renamed in JDK 21) -->
+        <lombok.version>1.18.34</lombok.version>
     </properties>
 
     <dependencies>
