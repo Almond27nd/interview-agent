@@ -25,9 +25,9 @@ node --version   # 确认已安装
 前端依赖后端提供 API 和 WebSocket 服务（默认 `localhost:9090`）。请先按照 [interview-agent](../interview-agent) 后端项目的说明启动后端：
 
 ```bash
-cd ../interview-agent
+cd ../interview-agent-java
 make infra-up              # 启动 Milvus + Redis + MySQL
-go run cmd/main.go web     # 启动后端，监听 :9090
+make run                   # 启动后端，监听 :9090
 ```
 
 ## 快速启动

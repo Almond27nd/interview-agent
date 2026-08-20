@@ -10,7 +10,6 @@ tags:
 
 <div style="background-color: #f0f9eb; padding: 10px 15px; border-radius: 4px; border-left: 5px solid #67c23a; margin: 20px 0; color:rgb(64, 147, 255);">
 
-<h2><span style="color: #006400;"><strong>关注秀才公众号：</strong></span><span style="color: red;"><strong>IT杨秀才</strong></span><span style="color: #006400;"><strong>，回复：</strong></span><span style="color: red;"><strong>面试</strong></span></h2>
 
 <div style="text-align: center;"><span style="color: #006400; font-size: 28px;"><strong>领取后端/AI面试题库PDF</strong></span></div>
 
@@ -273,7 +272,6 @@ CREATE TABLE `user` (
 最后，它的查询性能很稳定，因为每次查询都必须走到叶子节点，IO的次数是可预期的。综合这几点，B+树就成了MySQL索引最理想的数据结构。
 
 
-参考：https://golangstar.cn/backend\_series/advanced\_interview/database\_index.html
 
 ### **3.7 联合索引的底层存储结构是什么样的?**
 
@@ -1045,6 +1043,5 @@ undo log，也叫回滚日志。它记录的是数据在被修改**之前**的�
 3. **二次查询法**
 
 这几种方法都是业界比较常见而且有效的，每种方法介绍起来篇幅较多，大家可以在这篇文章学习：
-[https://golangstar.cn/backend_series/advanced_interview/database_sharding.html](https://golangstar.cn/backend_series/advanced_interview/database_sharding.html)
 
 

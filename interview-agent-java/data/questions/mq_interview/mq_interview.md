@@ -11,7 +11,6 @@ tags:
 
 <div style="background-color: #f0f9eb; padding: 10px 15px; border-radius: 4px; border-left: 5px solid #67c23a; margin: 20px 0; color:rgb(64, 147, 255);">
 
-<h2><span style="color: #006400;"><strong>关注秀才公众号：</strong></span><span style="color: red;"><strong>IT杨秀才</strong></span><span style="color: #006400;"><strong>，回复：</strong></span><span style="color: red;"><strong>面试</strong></span></h2>
 
 <div style="text-align: center;"><span style="color: #006400; font-size: 28px;"><strong>领取后端/AI面试题库PDF</strong></span></div>
 
@@ -134,7 +133,6 @@ MQ虽然好处很明显，但引入之后会带来三个比较大的挑战。
 
 消息重复消费的根本原因在于生产者可能因为网络抖动重复推送消息，或者消费者拉取消息后处理完毕但在提交offset之前宕机了，重启后又会拉到同一条消息。MQ框架层面很难完全杜绝这个问题，所以**核心解决方案是在消费端做幂等**。具体来说就是每条消息带一个唯一的业务标识，消费者处理之前先去数据库或Redis里查这个标识有没有被处理过，如果已处理就直接跳过，保证同一条消息不管消费几次，业务结果都只生效一次。
 
-**学习推荐：**[https://golangstar.cn/backend\_series/advanced\_interview/mq\_repeat.html](https://golangstar.cn/backend\_series/advanced\_interview/mq\_repeat.html)
 
 ***
 
@@ -189,7 +187,6 @@ MQ虽然好处很明显，但引入之后会带来三个比较大的挑战。
 
 **消费阶段**，核心原则是消费者必须在消息处理完成之后才回复ack，不能收到消息就立刻ack，否则处理到一半挂掉了消息就丢了。
 
-**学习推荐：**[https://golangstar.cn/backend_series/advanced_interview/mq_lost.html](https://golangstar.cn/backend_series/advanced_interview/mq_lost.html)
 
 ***
 
@@ -231,7 +228,6 @@ MQ虽然好处很明显，但引入之后会带来三个比较大的挑战。
 
 首先要识别业务中哪些消息需要保证顺序，比如同一个订单的创建、支付、完成这三条消息必须按序消费。保证顺序的核心思路是**把需要有序的消息发到同一个队列或分区里**。以Kafka为例，通过给消息指定相同的Key，保证相同Key的消息发到同一个Partition，Partition内天然有序。消费端要用单线程消费同一个分区的消息，不能多线程并发处理否则顺序会乱。不同业务之间的消息可以并发消费，只需要保证同一组业务内的顺序就行。如果需要全局有序，只能用一个分区，但这样会牺牲并行处理能力。
 
-**学习推荐：**[https://golangstar.cn/backend\_series/advanced\_interview/mq\_order.html](https://golangstar.cn/backend\_series/advanced\_interview/mq\_order.html)
 
 ***
 
@@ -538,7 +534,6 @@ Kafka保证的是**分区内有序**。同一个Partition内，消息按写入�
 
 两个核心手段。第一是**增加消费者实例**，前提是消费者数量不能超过分区数，因为一个分区同一时间只能被一个消费者消费，消费者再多也没用。第二是**增加分区数量**，扩大Topic的分区数可以提高并行处理能力，创建新分区后需要重新平衡消费者组，让更多消费者同时消费。当然根本上还是要排查消费者为什么慢，是不是代码里有慢查询、第三方接口超时等问题，找到瓶颈优化掉才能治本。
 
-**学习推荐：**[https://golangstar.cn/backend\_series/advanced\_interview/mq\_block.html](https://golangstar.cn/backend\_series/advanced\_interview/mq\_block.html)
 
 ***
 

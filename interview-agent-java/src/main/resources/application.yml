@@ -33,7 +33,7 @@ spring:
   datasource:
     url: ${MYSQL_URL:jdbc:mysql://localhost:3306/interview_agent?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai}
     username: ${MYSQL_USERNAME:root}
-    password: ${MYSQL_PASSWORD:interview}
+    password: ${MYSQL_PASSWORD:}
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
@@ -49,7 +49,7 @@ app:
     host: ${MILVUS_HOST:localhost}
     port: ${MILVUS_PORT:19530}
   jwt:
-    secret: ${JWT_SECRET:interview-agent-default-secret}
+    secret: ${JWT_SECRET:}
     expiration: 86400000  # 24 hours
   github:
     token: ${GITHUB_TOKEN:}
