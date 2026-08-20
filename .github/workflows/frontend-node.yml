@@ -1,0 +1,27 @@
+name: Frontend CI
+
+on:
+  push:
+    paths:
+      - 'interview-agent-web/**'
+    branches: [ main, chore/ci-and-lombok-version ]
+  pull_request:
+    paths:
+      - 'interview-agent-web/**'
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+      - name: Install and build
+        working-directory: interview-agent-web
+        run: |
+          npm ci
+          npm run build

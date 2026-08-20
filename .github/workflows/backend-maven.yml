@@ -1,0 +1,39 @@
+name: Java CI
+
+on:
+  push:
+    branches: [ main, chore/ci-and-lombok-version ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java: [ '21' ]
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: ${{ matrix.java }}
+          cache: 'maven'
+      - name: Build with Maven
+        working-directory: interview-agent-java
+        env:
+          # Maven Central / repo.spring.io rate-limit (HTTP 429) transiently; retry to absorb it
+          MAVEN_OPTS: "-Dmaven.wagon.http.retryHandler.count=3 -Dmaven.wagon.httpconnectionManager.maxPerRoute=5"
+        run: |
+          for i in 1 2 3; do
+            echo "::group::Maven build attempt $i"
+            if mvn -B -V -e clean package; then
+              echo "::endgroup::"
+              break
+            fi
+            echo "::endgroup::"
+            echo "Attempt $i failed (possibly transient 429 from the Maven repository); retrying in 20s..."
+            sleep 20
+          done

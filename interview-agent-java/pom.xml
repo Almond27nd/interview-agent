@@ -22,6 +22,9 @@
         <spring-ai-alibaba.version>1.1.2.0</spring-ai-alibaba.version>
         <milvus-sdk.version>2.4.2</milvus-sdk.version>
         <jjwt.version>0.12.6</jjwt.version>
+
+        <!-- Pin lombok.version explicitly; must be >= 1.18.30 for JDK 21 (JCTree$JCImport.qualid was renamed in JDK 21) -->
+        <lombok.version>1.18.34</lombok.version>
     </properties>
 
     <dependencies>
@@ -122,7 +125,7 @@
             <artifactId>gson</artifactId>
         </dependency>
 
-        <!-- 中文分词（BM25 检索使用，替代原先的“标点转空格+空格切分”朴素实现） -->
+        <!-- 中文分词（BM25 检索使用） -->
         <dependency>
             <groupId>com.huaban</groupId>
             <artifactId>jieba-analysis</artifactId>
@@ -133,10 +136,11 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
             <optional>true</optional>
         </dependency>
 
-        <!-- .env 文件自动加载（启动时自动读取项目根目录 .env，无需手动 export/source） -->
+        <!-- .env 文件自动加载 -->
         <dependency>
             <groupId>me.paulschwarz</groupId>
             <artifactId>spring-dotenv</artifactId>
@@ -150,7 +154,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- ArchUnit: 架构边界机械化检查（harness 约束层） -->
+        <!-- ArchUnit -->
         <dependency>
             <groupId>com.tngtech.archunit</groupId>
             <artifactId>archunit-junit5</artifactId>
@@ -158,8 +162,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- 可观测性：Micrometer Tracing + OpenTelemetry OTLP exporter -->
-        <!-- Spring AI ChatModel 内置 Observation，引入这些依赖后 LLM 调用自动产生 trace span -->
+        <!-- Observability -->
         <dependency>
             <groupId>io.micrometer</groupId>
             <artifactId>micrometer-tracing-bridge-otel</artifactId>
@@ -169,7 +172,7 @@
             <artifactId>opentelemetry-exporter-otlp</artifactId>
         </dependency>
 
-        <!-- 业务指标暴露给 Prometheus -->
+        <!-- Prometheus -->
         <dependency>
             <groupId>io.micrometer</groupId>
             <artifactId>micrometer-registry-prometheus</artifactId>
